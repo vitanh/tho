@@ -1,0 +1,2 @@
+serviceClass: tho.client.GreetingService
+path: 06CA9CE33B346633F4013596CF8D9502.gwt.rpc
