@@ -7,16 +7,6 @@
 
   <!-- Servlets -->
   <servlet>
-    <servlet-name>greetServlet</servlet-name>
-    <servlet-class>tho.server.GreetingServiceImpl</servlet-class>
-  </servlet>
-  
-  <servlet-mapping>
-    <servlet-name>greetServlet</servlet-name>
-    <url-pattern>/tho/greet</url-pattern>
-  </servlet-mapping>
-
-  <servlet>
     <servlet-name>guestServlet</servlet-name>
     <servlet-class>tho.GuestServlet</servlet-class>
   </servlet>
@@ -28,7 +18,7 @@
   
   <!-- Default page to serve -->
   <welcome-file-list>
-    <welcome-file>guest.jsp</welcome-file>
+    <welcome-file>guestServlet</welcome-file>
   </welcome-file-list>
 
 </web-app>

@@ -18,7 +18,7 @@ public class GuestServlet extends HttpServlet {
             resp.setContentType("text/plain");
             resp.getWriter().println("Hello, " + user.getNickname());
         } else {
-            resp.sendRedirect(userService.createLoginURL(req.getRequestURI()));
+            resp.sendRedirect("guest.jsp");
         }
     }
 }
