@@ -18,15 +18,21 @@
     <style type="text/css">
       .background{
       	background: url(wall.jpg) no-repeat center center fixed; 
-		-webkit-background-size: cover;
-		-moz-background-size: cover;
-		-o-background-size: cover;
+		    -webkit-background-size: cover;
+		    -moz-background-size: cover;
+		    -o-background-size: cover;
         background-size: cover;
       }
       .transparent-div{
         background: no-repeat center center fixed #DFDFDF;
         border-radius: 10px;
-        margin-top: 20%;
+        margin-top: 7%;
+      }
+      .textarea-width{
+        width: 270px;
+      }
+      .margin-idea{
+        margin-left: 85px;
       }
 
     </style>
@@ -36,14 +42,29 @@
   <body class="background"> 
    <div class="container"> 
     <div class="row">
-      <div class="span4 offset2 transparent-div">
-        <h1>Hello, dolly!</h1>
-        <p>Hello,fassfsdlly2!</p>
+      <div class="span6 transparent-div">
+        <div class="margin-idea">
+          <h1>Mary Vitanh</h1>
+          <p>Your last five thoughts:</p>
+          <ul>
+           <li><a href="#">liun</a></li>
+           <li><a href="#">huyg</a></li>
+           <li><a href="#">uky</a></li>
+           <li><a href="#">ljkh</a></li>
+           <li><a href="#">ljf</a></li>
+          </ul>
+          <p><a href="#">See all your thoughts</a></p>
+        </div>
       </div>
-      <div class="span4 transparent-div">
-        <a href="<%= userService.createLoginURL("/") %>">
-         <img src="https://developers.google.com/+/images/branding/sign-in-buttons/Red-signin_Medium_base_44dp.png">
-       </a>
+      <div class="span6 transparent-div">
+        <div class="margin-idea">
+          <h2>Create new thought</h2>
+          <input class="input-xlarge" type="text" placeholder="Title">
+          <textarea class="textarea-width" rows="12"></textarea>
+          <input class="input-xlarge" type="text" placeholder="Tags (separated by comma)">
+          <br>
+          <a class="btn btn-large btn-centered" href="#">Save</a>
+        </div>
       </div>
     </div>
    </div>
