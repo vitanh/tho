@@ -16,6 +16,19 @@
     <url-pattern>/guest</url-pattern>
   </servlet-mapping>
   
+  
+  <servlet>
+    <servlet-name>saveServlet</servlet-name>
+    <servlet-class>tho.SaveThoughtServlet</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+    <servlet-name>saveServlet</servlet-name>
+    <url-pattern>/save</url-pattern>
+  </servlet-mapping>
+  
+  
+  
   <!-- Default page to serve -->
   <welcome-file-list>
     <welcome-file>guestServlet</welcome-file>

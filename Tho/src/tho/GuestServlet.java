@@ -15,8 +15,7 @@ public class GuestServlet extends HttpServlet {
         User user = userService.getCurrentUser();
 
         if (user != null) {
-            resp.setContentType("text/plain");
-            resp.getWriter().println("Hello, " + user.getNickname());
+            resp.sendRedirect("main.jsp");
         } else {
             resp.sendRedirect("guest.jsp");
         }

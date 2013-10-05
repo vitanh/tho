@@ -59,11 +59,13 @@
       <div class="span6 transparent-div">
         <div class="margin-idea">
           <h2>Create new thought</h2>
-          <input class="input-xlarge" type="text" placeholder="Title">
-          <textarea class="textarea-width" rows="12"></textarea>
-          <input class="input-xlarge" type="text" placeholder="Tags (separated by comma)">
-          <br>
-          <a class="btn btn-large btn-centered" href="#">Save</a>
+          <form action="save" method="post">
+            <input class="input-xlarge" type="text" placeholder="Title" name="title">
+            <textarea class="textarea-width" rows="12" name="thought"></textarea>
+            <input class="input-xlarge" type="text" placeholder="Tags (separated by comma)" name="tags">
+            <br>
+            <input class="btn btn-large btn-centered" type="submit" value="Save">
+          </form>
         </div>
       </div>
     </div>
