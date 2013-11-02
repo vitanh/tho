@@ -40,7 +40,7 @@ public class SaveThoughtServlet extends HttpServlet {
 
         DatastoreService datastore = DatastoreServiceFactory.getDatastoreService();
         datastore.put(thoughtRecord);
-
-        resp.sendRedirect("/main.jsp");
+        
+        resp.sendRedirect("/main.jsp?title=" + title);
     }
 }

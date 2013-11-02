@@ -27,6 +27,7 @@
         background: no-repeat center center fixed #DFDFDF;
         border-radius: 10px;
         margin-top: 20%;
+        padding: 30px;
       }
 
     </style>
@@ -37,8 +38,8 @@
    <div class="container"> 
     <div class="row">
       <div class="span4 offset2 transparent-div">
-        <h1>Hello, dolly!</h1>
-        <p>Hello,fassfsdlly2!</p>
+        <h1>Thought Keeper</h1>
+        <p>ThoKeep - is a tool that helps to catch and collect your thoughts.Got an idea? Write it to ThoKeep, and it will never leave you. </p>
       </div>
       <div class="span4 transparent-div">
         <a href="<%= userService.createLoginURL("/") %>">
