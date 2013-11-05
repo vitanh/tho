@@ -28,11 +28,11 @@ public class SaveThoughtServlet extends HttpServlet {
         String thought = req.getParameter("thought");
         String tags = req.getParameter("tags");
         
-        Key thoughtsKey = KeyFactory.createKey("Thoughts", title);
+        Key thoughtsKey = KeyFactory.createKey("thoughts", title);
         
         Date date = new Date();
-        Entity thoughtRecord = new Entity("Thoughts", thoughtsKey);
-        thoughtRecord.setProperty("user", user);
+        Entity thoughtRecord = new Entity(thoughtsKey);
+        thoughtRecord.setProperty("user", user.getEmail());
         thoughtRecord.setProperty("date", date);
         thoughtRecord.setProperty("title", title);
         thoughtRecord.setProperty("thought", thought);
@@ -41,6 +41,6 @@ public class SaveThoughtServlet extends HttpServlet {
         DatastoreService datastore = DatastoreServiceFactory.getDatastoreService();
         datastore.put(thoughtRecord);
         
-        resp.sendRedirect("/main.jsp?title=" + title);
+        resp.sendRedirect("/thought.jsp?title=" + title);
     }
 }

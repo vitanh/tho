@@ -59,12 +59,12 @@
    DatastoreService ds = DatastoreServiceFactory.getDatastoreService();
 			
 		// creating query
-		Query query = new Query("Thoughts");
+		Query query = new Query("thoughts");
 		
 		List<Entity> allEntities = ds.prepare(query).asList(
 				FetchOptions.Builder.withLimit(5)); 
 		for(Entity e : allEntities){
-			out.println("<li><a href=\"?thought=" + e.getProperty("title") + "\">" + e.getProperty("title") + "</a></li>");
+			out.println("<li><a href=\"/thought.jsp?title=" + e.getProperty("title") + "\">" + e.getProperty("title") + "</a></li>");
 		}
 		out.println(request.getParameter("title"));
 %>
