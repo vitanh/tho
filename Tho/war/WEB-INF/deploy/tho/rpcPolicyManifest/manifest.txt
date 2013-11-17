@@ -1,2 +1,3 @@
 # Module tho
 # RPC service class, partial path of RPC policy file
+tho.client.GreetingService, 06CA9CE33B346633F4013596CF8D9502.gwt.rpc

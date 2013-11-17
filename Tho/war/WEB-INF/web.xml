@@ -27,6 +27,16 @@
     <url-pattern>/save</url-pattern>
   </servlet-mapping>
   
+    <servlet>
+    <servlet-name>editServlet</servlet-name>
+    <servlet-class>tho.EditThoughtServlet</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+    <servlet-name>editServlet</servlet-name>
+    <url-pattern>/edit</url-pattern>
+  </servlet-mapping>
+  
   <servlet>
     <servlet-name>testServlet</servlet-name>
     <servlet-class>tho.TestServlet</servlet-class>

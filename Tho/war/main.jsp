@@ -16,7 +16,7 @@
 
 <%
     UserService userService = UserServiceFactory.getUserService();
-    
+    User user = userService.getCurrentUser();
 %>
  
 <!DOCTYPE html>
@@ -52,8 +52,7 @@
     <div class="row">
       <div class="span6 transparent-div">
         <div class="margin-idea">
-          <h1>Mary Vitanh</h1>
-          <p>Your last five thoughts:</p>
+          <h1><% out.print(user.getNickname()); %></h1>
           <ul>
 <%
    DatastoreService ds = DatastoreServiceFactory.getDatastoreService();
@@ -62,15 +61,22 @@
 		Query query = new Query("thoughts");
 		
 		List<Entity> allEntities = ds.prepare(query).asList(
-				FetchOptions.Builder.withLimit(5)); 
-		for(Entity e : allEntities){
-			out.println("<li><a href=\"/thought.jsp?title=" + e.getProperty("title") + "\">" + e.getProperty("title") + "</a></li>");
+				FetchOptions.Builder.withLimit(20)); 
+		
+		if(allEntities.isEmpty()){
+			out.println("You do not have written thoughts yet. Add one!");
+		} else {	
+			out.println("<p>Your last thoughts:</p>");	
+			for(Entity e : allEntities){
+				out.println("<li><a href=\"/thought.jsp?title=" + e.getProperty("title") + "\">" + e.getProperty("title") + "</a></li>");
+			}
 		}
-		out.println(request.getParameter("title"));
+
+
 %>
 	
           </ul>
-          <p><a href="#">See all your thoughts</a></p>
+        
         </div>
       </div>
       <div class="span6 transparent-div">
